@@ -7,7 +7,6 @@
     "babel": "better-npm-run babel",
     "prebuild": "npm run lint && npm test && npm run clean",
     "build": "better-npm-run build",
-    "postbuild": "npm run clean:dev",
     "clean": "rimraf dist",
     "fonts": "cpx './src/fonts/*/*.{eot,ttf,woff}' ./dist/fonts",
     "images": "cpx './src/images/*.{png,jpg}' ./dist/images",

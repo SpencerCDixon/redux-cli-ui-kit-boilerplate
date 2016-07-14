@@ -1,5 +1,5 @@
 import Button from 'components/Button';
-import css from 'components/Button/Button.less';
+import css from 'components/Button/Button.css';
 
 describe('Button', function() {
   let wrapper;
