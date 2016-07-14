@@ -9,6 +9,7 @@ class Sidebar extends Component {
         <SidebarLink to="/components">Home</SidebarLink>
         <SidebarLink to="/components/button">Button</SidebarLink>
         <SidebarLink to="/components/text">Text</SidebarLink>
+        <SidebarLink to="/components/header">Header</SidebarLink>
       </div>
     );
   }

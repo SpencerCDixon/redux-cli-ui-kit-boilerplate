@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { solarizedLight } from 'react-syntax-highlighter/dist/styles';
+import { solarizedDark } from 'react-syntax-highlighter/dist/styles';
 
 const propTypes = {
   children: PropTypes.node,
@@ -17,7 +17,7 @@ class CodeBlock extends Component {
   render() {
     const { language, children } = this.props;
     return (
-      <SyntaxHighlighter language={language} style={solarizedLight}>
+      <SyntaxHighlighter language={language} style={solarizedDark}>
         {children}
       </SyntaxHighlighter>
     );
