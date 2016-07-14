@@ -1,7 +1,8 @@
 var path = require('path');
 var fs   = require('fs');
 
-const routesPath = path.resolve('src', 'development', 'routes.js');
+const routesPath = path.resolve('docs', 'routes.js');
+const sideBarPath = path.resolve('docs', 'components', 'Sidebar', 'Sidebar.js');
 
 module.exports = {
   description() {
@@ -11,12 +12,13 @@ module.exports = {
   afterInstall(options) {
     this.writeImportStatement(options.entity.name);
     this.writeNewRoute(options.entity.name);
+    this.writeSideBarLink(options.entity.name);
   },
 
   writeImportStatement(name) {
     this.ui.writeCreate('Adding import statement to routes');
     const containerName = `${name}Container`;
-    const templateString = `import ${containerName} from './containers/${containerName}';`;
+    const templateString = `import ${containerName} from 'containers/${containerName}';`;
 
     const content = fs.readFileSync(routesPath).toString().split('\n');
     const importIndex = content.indexOf('// Container Views');
@@ -40,6 +42,18 @@ module.exports = {
     content.splice(addIndex, 0, templateString);
     fs.writeFileSync(routesPath, content.join('\n'), 'utf8');
     this.ui.writeCreate('Successfully added new route');
+  },
+
+  writeSideBarLink(name) {
+    this.ui.writeCreate('Adding link to the sidebar');
+    const templateString = `        <SidebarLink to="/components/${this.downcase(name)}">${name}</SidebarLink>`
+
+    const content = fs.readFileSync(sideBarPath).toString().split('\n');
+    const importIndex = content.indexOf('      </div>');
+
+    content.splice(importIndex, 0, templateString);
+    fs.writeFileSync(sideBarPath, content.join('\n'), 'utf8');
+    this.ui.writeCreate('Successfully added new link to sidebar');
   },
 
   downcase(string) {
