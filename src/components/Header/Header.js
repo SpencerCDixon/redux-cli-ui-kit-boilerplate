@@ -16,7 +16,7 @@ const defaultProps = {
 class Header extends Component {
   render() {
     return (
-      <h2>
+      <h2 className={css.header}>
         {this.props.children}
       </h2>
     );
