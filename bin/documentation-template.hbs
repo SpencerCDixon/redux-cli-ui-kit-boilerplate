@@ -4,17 +4,17 @@ import Card from 'components/Card';
 import CardHeader from 'components/CardHeader';
 import CardContent from 'components/CardContent';
 import Table from 'components/Table';
-import Text from 'components/Text';
+import P from 'components/P';
 
 class {{title}}Documentation extends Component {
   render() {
     return (
       <Card>
-        <CardHeader withRule>{{title}} Component Props</CardHeader>
+        <CardHeader>{{title}} Component Props</CardHeader>
         <CardContent>
-          <Text block>
+          <P>
             {{description}}
-          </Text>
+          </P>
 
           <Table>
             <thead>

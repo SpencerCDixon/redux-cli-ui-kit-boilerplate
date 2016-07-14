@@ -4,17 +4,17 @@ import Card from 'components/Card';
 import CardHeader from 'components/CardHeader';
 import CardContent from 'components/CardContent';
 import Table from 'components/Table';
-import Text from 'components/Text';
+import P from 'components/P';
 
 class ButtonDocumentation extends Component {
   render() {
     return (
       <Card>
-        <CardHeader withRule>Button Component Props</CardHeader>
+        <CardHeader>Button Component Props</CardHeader>
         <CardContent>
-          <Text block>
+          <P>
             Just a simple button
-          </Text>
+          </P>
 
           <Table>
             <thead>

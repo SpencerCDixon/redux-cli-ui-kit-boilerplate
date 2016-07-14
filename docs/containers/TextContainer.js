@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import TextDocumentation from 'components/Text/TextDocumentation';
+import TextDocumentation from 'components/Text/TextDocumentation';
 
 class TextContainer extends Component {
   render() {
