@@ -1,0 +1,48 @@
+/* eslint-disable */
+import React, { Component } from 'react';
+import Card from 'components/Card';
+import CardHeader from 'components/CardHeader';
+import CardContent from 'components/CardContent';
+import Table from 'components/Table';
+import Text from 'components/Text';
+
+class {{title}}Documentation extends Component {
+  render() {
+    return (
+      <Card>
+        <CardHeader withRule>{{title}} Component Props</CardHeader>
+        <CardContent>
+          <Text block>
+            {{description}}
+          </Text>
+
+          <Table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Default Value</th>
+                <th>Required</th>
+              </tr>
+            </thead>
+            <tbody>
+            {{#each props}}
+              <tr>
+                <td>{{name}}</td>
+                <td width='20%'><code>{{type}}</code></td>
+                <td>{{description}}</td>
+                <td>{{defaultValue}}</td>
+                <td>{{#if required}}✓{{/if}}</td>
+              </tr>
+            {{/each}}
+            </tbody>
+          </Table>
+        </CardContent>
+      </Card>
+    );
+  }
+}
+
+export default {{title}}Documentation;
+/* eslint-enable */
