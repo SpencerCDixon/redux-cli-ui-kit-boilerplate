@@ -24,7 +24,7 @@
       }
     },
     "babel": {
-      "command": "babel ./src --out-dir ./dist --ignore examples/*,*Documentation.js",
+      "command": "babel ./src --out-dir ./dist --ignore examples/*,*Documentation.js,*.test.js",
       "env": {
         "NODE_ENV": "production"
       }
