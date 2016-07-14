@@ -6,6 +6,7 @@ class Sidebar extends Component {
   render() {
     return (
       <div className={css.sidebar}>
+        <SidebarLink to="/components">Home</SidebarLink>
         <SidebarLink to="/components/button">Button</SidebarLink>
         <SidebarLink to="/components/text">Text</SidebarLink>
       </div>

@@ -43,7 +43,7 @@ var propTypes = {
 
 var defaultProps = {
   onClick: function onClick() {
-    return console.log('replace me');
+    return alert('replace me');
   },
   isActive: false
 };

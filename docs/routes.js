@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, IndexRoute } from 'react-router';
+import { Route, IndexRoute, Redirect } from 'react-router';
 import CoreLayout from './components/CoreLayout/CoreLayout.js';
 import CompLayout from './components/CompLayout/CompLayout.js';
 
@@ -12,9 +12,10 @@ import Home from './pages/Home';
 
 export default () => (
   <Route path="/" component={CoreLayout}>
-    <IndexRoute component={Home} />
+    <Redirect to="components" />
 
     <Route path="components" component={CompLayout}>
+      <IndexRoute component={Home} />
       <Route path="text" component={TextContainer} />
       <Route path="button" component={ButtonContainer} />
     </Route>
