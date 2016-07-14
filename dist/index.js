@@ -21,3 +21,12 @@ Object.defineProperty(exports, 'Text', {
     return _Text.Text;
   }
 });
+
+var _Header = require('./components/Header');
+
+Object.defineProperty(exports, 'Header', {
+  enumerable: true,
+  get: function get() {
+    return _Header.Header;
+  }
+});
